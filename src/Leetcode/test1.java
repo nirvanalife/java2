@@ -1,4 +1,4 @@
-package Leedcode;
+package Leetcode;
 
 public class test1 {
 //    给你一个数组 nums，对于其中每个元素 nums[i]，请你统计数组中比它小的所有数字的数目。

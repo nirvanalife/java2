@@ -1,3 +1,5 @@
+package huisu;
+
 import java.util.ArrayList;
 
 public class test114 {
@@ -7,7 +9,7 @@ public class test114 {
      */
     public static ArrayList<String> l=new ArrayList<>();
     public static void main(String[] args) {
-        ArrayList<String> list=generateParenthesis(3);
+        ArrayList<String> list=generateParenthesis(2);
         int x=0;
     }
     /**
@@ -18,7 +20,7 @@ public class test114 {
     public static ArrayList<String> generateParenthesis (int n) {
         // write code here
 
-        g("",0,0,3);
+        g("",0,0,n);
         return l;
     }
     public static void g (String s,int left,int right,int n){

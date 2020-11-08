@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class test95 {
+public class test96 {
 //    将一个链表\ m m 位置到\ n n 位置之间的区间反转
     public static class ListNode {
         int val;
@@ -11,12 +11,14 @@ public class test95 {
 
     }
     public static void main(String[] args) {
-        ListNode head=new ListNode(1);
-        head.next=new ListNode(2);
-        head.next.next=new ListNode(3);
-        head.next.next.next=new ListNode(4);
-        head.next.next.next.next=new ListNode(5);
-        ListNode result=reverseBetween(head,2,4);
+//        ListNode head=new ListNode(1);
+//        head.next=new ListNode(2);
+//        head.next.next=new ListNode(3);
+//        head.next.next.next=new ListNode(4);
+//        head.next.next.next.next=new ListNode(5);
+        ListNode head=new ListNode(3);
+        head.next=new ListNode(5);
+        ListNode result=reverseBetween(head,1,1);
     }
 
     /**
@@ -36,17 +38,17 @@ public class test95 {
             return head;
         }
         ArrayList<Integer> list=new ArrayList<>();
-        int count=0;
-        while(head.next!=null){
+        int count=1;
+        while(head!=null){
             list.add(head.val);
             count++;
             head=head.next;
         }
         ArrayList<Integer> list2=new ArrayList<>();
-        list2=list;
+        list2= (ArrayList<Integer>) list.clone();
         int sum=m-1+n-1;
         for(int i=m-1;i<=n-1;i++){
-            list2.add(i,sum-i);
+            list2.set(i,list.get(sum-i));
         }
         ListNode x=new ListNode(list2.get(0));
         ListNode y=x;
@@ -54,7 +56,7 @@ public class test95 {
             x.next=new ListNode(list2.get(i));
             x=x.next;
         }
-        return null;
+        return y;
     }
 
 }

@@ -1,3 +1,5 @@
+package 动态规划;
+
 public class test89 {
 //    一个机器人在m×n大小的地图的左上角（起点，下图中的标记“start"的位置）。
 //    机器人每次向下或向右移动。机器人要到达地图的右下角。（终点，下图中的标记“Finish"的位置）。
@@ -12,6 +14,7 @@ public class test89 {
      * @param m int整型
      * @param n int整型
      * @return int整型
+     * 初始化第一行第一列为1 其他的f[i][j]=f[i-1][j]+f[i][j-1]
      */
     public static int uniquePaths (int m, int n) {
         // write code here

@@ -1,4 +1,4 @@
-package Leedcode;
+package Leetcode;
 
 import java.util.*;
 
